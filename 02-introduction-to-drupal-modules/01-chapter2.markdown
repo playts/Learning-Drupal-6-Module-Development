@@ -22,6 +22,7 @@ Drupal 的核心是用过程化风格的 PHP 小心谨慎地写成的。代码�
 一个简化的 Drupal 技术层次图如下所示：
 
 ![插图 1-1](https://raw.github.com/playts/Learning-Drupal-6-Module-Development/master/images/1-1.jpg)
+
 插图 1-1
 
 中间是 Drupal 的核心，它是一组文件，由自举代码和重要的常用函数库组成。Drupal 核心函数库是粘结层，把 Drupal 的模块粘结在一起。它们提供的服务包括数据连接与管理（上图中由连到数据库的虚线表示）以及本书将要详细讲解的高度可定制的钩子框架。其它标准特性包括邮 件与图像库、国际化、Unicode 支持也包含在 Drupal 核心库之中。
@@ -53,6 +54,7 @@ Drupal 的核心是用过程化风格的 PHP 小心谨慎地写成的。代码�
 提示：在 Drupal 的管理页面上，导航到 Administer | Site building | Modules，在此你可以看到核心模块的列表。最重要的是5个必备模块Block, Filter, Node, System, 和 User。不能卸载或停用它们。其它模块，比如 Menu, Locale, 和 Taxonomy 提供了基本服务，甚至在基本的安装过程中也需要这些服务。
 
 ![插图 1-2](https://raw.github.com/playts/Learning-Drupal-6-Module-Development/master/images/1-2.jpg)
+
 插图 1-2
 
 在 Drupal 体系结构的皇冠上有一颗明珠，那就是模块之间能很容易地交互。使用钩子体系结构，模块提供的服务可以被编织在一起，不需要大量的代码就可以创建出健壮的特性。
@@ -139,6 +141,7 @@ Drupal是个内容管理框架。在这个语境中，我们所说的内容通�
 默认情况下，在Drupal中创建新内容是通过单击主导航区的“Create Content”链接进行的。在这个页面中，提示用户为他们的新页面选择内容类型：
 
 ![插图 1-3](https://raw.github.com/playts/Learning-Drupal-6-Module-Development/master/images/1-3.jpg)
+
 插图 1-3
 
 上面的截图中显示出三种不同的可用内容类型。
@@ -158,6 +161,7 @@ Story和Page内容类型是默认包含的。Quotes内容类型是我们将在�
 下面是评论张贴页面的一个例子：
 
 ![插图 1-4](https://raw.github.com/playts/Learning-Drupal-6-Module-Development/master/images/1-4.jpg)
+
 插图 1-4
 
 评论与节点扮演不同的角色。例如，评论总是与一个节点联系在一起。
@@ -191,6 +195,7 @@ Story和Page内容类型是默认包含的。Quotes内容类型是我们将在�
 区块不是一种内容类型。实际上，它是一种抽象单元（占位符），主要用于显示其它内容。管理员可以使用区块编辑器，确定区块在主题化了的页面上的显示位置：
 
 ![插图 1-5](https://raw.github.com/playts/Learning-Drupal-6-Module-Development/master/images/1-5.jpg)
+
 插图 1-5
 
 上面截图中的高亮区域表示了区块可以被显示的位置。
